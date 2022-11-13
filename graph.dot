@@ -4,21 +4,30 @@ digraph G{
   subgraph cluster_topic_1 {
     color = black;
     label = "The First Topic";
+    // Nodes
     "Concept 1";
     "Concept 2";
     "Concept 5";
+    // Links
     "Concept 1" -> "Concept 2" [label="Relationship"];
     "Concept 2" -> "Concept 5" [label="Difference"];
     "Concept 5" -> "Concept 1";
   }
-  subgraph cluster_topic_2 {
+  subgraph cluster_rigid_body_dynamics {
     color = black;
-    label = "The Second Topic";
+    label = "Rigid Body Dynamics";
+    href = "./nodes/html/rigid_body_dynamics.html";
+    // Nodes
     "Concept 3";
     "Concept 4";
+    "Forward Dynamics" [href="./nodes/html/forward_dynamics.html"]
+    "Inverse Dynamics" [href="./nodes/html/inverse_dynamics.html"]
+    // Links
     "Concept 3" -> "Concept 4";
+    "Inverse Dynamics" -> "Forward Dynamics" [label="Transformation", href="./links/html/forward_inverse_dynamics.html"]
   }
   "Singleton Concept";
+  "Torque" [href="./nodes/html/torque.html"];
   "Concept 1" -> "Concept 3" [label="Relationship between Topics", ltail="cluster_topic_1", lhead="cluster_topic_2"];
   "Concept 2" -> "Concept 4" [label="Cross-Topic Relationship"];
 }
