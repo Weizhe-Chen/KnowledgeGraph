@@ -17,17 +17,25 @@ To build your own graph, edit this file using your favorate editor, e.g., vim.
 vim graph.dot
 ```
 
+We use the following knowledge graph as a running example.
+
+<img src="./images/demo_knowledge_graph.png" alt="drawing" width="200">
+
+The self-explained code for generating this graph is attached below.
+Note that the `subgrah` identifier must start with `cluster`.
+In orther words, `subgraph topic_1 {}` does not work.
+
 ```graphviz
-digraph G{
+digraph G{  // We build a directed graph.
   rankdir="TB";  // Top-down layout. Try LR for left-right layout.
   compound = true; // Allow edges between clusters.
-  subgraph cluster_topic_1 {
-    color = black;
-    label = "The First Topic";
-    "Concept 1";
+  subgraph cluster_topic_1 {  // A cluster/topic/group.
+    color = black;  // Line color of this cluster.
+    label = "The First Topic"; // Name of this topic.
+    "Concept 1";  // A node
     "Concept 2";
     "Concept 5";
-    "Concept 1" -> "Concept 2" [label="Relationship"];
+    "Concept 1" -> "Concept 2" [label="Relationship"];  // A link.
     "Concept 2" -> "Concept 5" [label="Difference"];
     "Concept 5" -> "Concept 1";
   }
