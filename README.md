@@ -13,12 +13,6 @@ Click on the image to check out the **interactive** knowledge graph. **All texts
 
 ## How do I open the graph?
 If you have downloaded/cloned the repository, simply open `graph.html` using your browser.
-In terminal, this can also be done by
-
-```bash
-browse graph.html
-```
-
 If you would like to share your knowledge graph online, like [this website](https://weizhechen.com/KnowledgeGraph/graph.html), follow these steps:
 1. Fork this repository via the upper-right button.
 2. Go to your forked repository.
