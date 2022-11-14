@@ -1,5 +1,5 @@
 # Knowledge Graph
-Click on the image to check out the interactive knowledge graph.
+Click on the image to check out the **interactive** knowledge graph. All texts are clickable!
 
 <p align="center"><a href="https://weizhechen.com/KnowledgeGraph/graph.html"><img src="./images/demo_knowledge_graph.png" alt="drawing"></a></p> 
 
