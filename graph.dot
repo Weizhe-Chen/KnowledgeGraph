@@ -4,13 +4,14 @@ digraph G{
   subgraph cluster_topic_1 {
     color = black;
     label = "The First Topic";
+    href="./nodes/html/the_first_topic.html"
     // Nodes
-    "Concept 1";
-    "Concept 2";
-    "Concept 5";
+    "Concept 1" [href="./nodes/html/concept_1.html"];
+    "Concept 2" [href="./nodes/html/concept_2.html"];
+    "Concept 5" [href="./nodes/html/concept_5.html"];
     // Links
-    "Concept 1" -> "Concept 2" [label="Relationship"];
-    "Concept 2" -> "Concept 5" [label="Difference"];
+    "Concept 1" -> "Concept 2" [label="Relationship",href="./links/html/relationship.html"];
+    "Concept 2" -> "Concept 5" [label="Difference",href="./links/html/difference.html"];
     "Concept 5" -> "Concept 1";
   }
   subgraph cluster_rigid_body_dynamics {
@@ -18,16 +19,16 @@ digraph G{
     label = "Rigid Body Dynamics";
     href = "./nodes/html/rigid_body_dynamics.html";
     // Nodes
-    "Concept 3";
-    "Concept 4";
+    "Concept 3" [href="./nodes/html/concept_3.html"];
+    "Concept 4" [href="./nodes/html/concept_4.html"];
     "Forward Dynamics" [href="./nodes/html/forward_dynamics.html"]
     "Inverse Dynamics" [href="./nodes/html/inverse_dynamics.html"]
     // Links
     "Concept 3" -> "Concept 4";
     "Inverse Dynamics" -> "Forward Dynamics" [label="Transformation", href="./links/html/forward_inverse_dynamics.html"]
   }
-  "Singleton Concept";
+  "Singleton Concept" [href="./nodes/html/singleton_concept.html"];
   "Torque" [href="./nodes/html/torque.html"];
-  "Concept 1" -> "Concept 3" [label="Relationship between Topics", ltail="cluster_topic_1", lhead="cluster_topic_2"];
-  "Concept 2" -> "Concept 4" [label="Cross-Topic Relationship"];
+  "Concept 1" -> "Concept 3" [label="Relationship between Topics", ltail="cluster_topic_1", lhead="cluster_rigid_body_dynamics", href="./links/html/relationship_between_topics.html"];
+  "Concept 2" -> "Concept 4" [label="Cross-Topic Relationship", href="./links/html/cross_topic_relationship.html"];
 }
