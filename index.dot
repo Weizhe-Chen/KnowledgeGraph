@@ -10,8 +10,8 @@ digraph G{
   "Value-Based" [href="./html/value_based.html"];
   "Policy-Based" [href="./html/policy_based.html"];
   "Actor-Critic" [href="./html/actor_critic.html"];
-  "Gradient-Based" [href="./html/gradient_based_mbrl.html"];
-  "Sampling-Based" [href="./html/sampling_based_mbrl.html"];
+  "Gradient-Based" [href="./html/gradient_based.html"];
+  "Sampling-Based" [href="./html/sampling_based.html"];
   "Model-Based" [color=blue,href="./html/model_based.html"];
   "Model-Free" [color=red,href="./html/model_free.html"];
   "RHC/MPC" [color=blue,href="./html/rhc_or_mpc.html"];
