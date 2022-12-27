@@ -2,7 +2,7 @@
 Check out the online **interactive** knowledge graph.😎
 Note that the text in the graph is clickable 😊
 
-<p align="center"><a href="https://weizhechen.com/KnowledgeGraph/index.html"><img src="./images/demo_graph.png" alt="drawing" width=500></a></p>
+<a href="https://weizhechen.com/KnowledgeGraph/index.html"><img src="./images/demo_graph.png" alt="drawing"></a>
 
 ## What should I install?
 1. Install `pandoc` following https://github.com/jgm/pandoc/blob/master/INSTALL.md
