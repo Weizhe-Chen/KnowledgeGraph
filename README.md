@@ -57,6 +57,9 @@ To create your own knowledge graph, follow these steps:
     * Enable **Enforce HTTPS**.
     * Now your knowledge graph can be accessed via `https://your-github-user-name.github.io/KnowledgeGraph/index.html`.
 
+## Support
+If you find this repository useful, please consider giving it a :star:. Your support helps keep the project active and up to date. Thanks for your support!
+
 ## Acknowledgements 👏
 
 We would like to thank the following tools and resources for making this project possible:
@@ -64,3 +67,5 @@ We would like to thank the following tools and resources for making this project
 * [Pandoc](https://pandoc.org/) - for converting the Markdown files to HTML.
 * [Graphviz](https://graphviz.org/) - for generating the graph.
 * [ChatGPT](https://chat.openai.com/) - for helping us build the demo reinforcement learning knowledge graph.
+
+## Suppo
