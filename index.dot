@@ -1,0 +1,84 @@
+digraph G{
+  layout="dot";
+  splines=false;
+  overlap=false;
+  rankdir="TB";  // Top-down layout. Try LR for left-right layout.
+  compound = true; // Allow edges between clusters.
+  // Concepts
+  "Reinforcement Learning" [fontsize=20,href="./html/reinforcement_learning.html"];
+  "Policy Optimization" [href="./html/policy_optimization.html"];
+  "Value-Based" [href="./html/value_based.html"];
+  "Policy-Based" [href="./html/policy_based.html"];
+  "Actor-Critic" [href="./html/actor_critic.html"];
+  "Gradient-Based" [href="./html/gradient_based_mbrl.html"];
+  "Sampling-Based" [href="./html/sampling_based_mbrl.html"];
+  "Model-Based" [color=blue,href="./html/model_based.html"];
+  "Model-Free" [color=red,href="./html/model_free.html"];
+  "RHC/MPC" [color=blue,href="./html/rhc_or_mpc.html"];
+  "PILCO" [color=blue,href="./html/pilco.html"];
+  "Dynamic Programming" [color=blue,href="./html/dynamic_programming.html"];
+  "Value Iteration" [color=blue,href="./html/value_iteration.html"];
+  "Policy Iteration" [color=blue,href="./html/policy_iteration.html"];
+  "Bellman Optimality Equation" [color=blue,href="./html/bellman.html"];
+  "LQR" [color=blue,href="./html/lqr.html"];
+  "CEM" [color=blue,href="./html/cem.html"];
+  "Policy Gradient" [color=red,href="./html/policy_gradient.html"];
+  "REINFORCE" [color=red,href="./html/reinforce.html"];
+  "TRPO" [color=red,href="./html/trpo.html"];
+  "PPO" [color=red,href="./html/ppo.html"];
+  "SARSA" [color=red,href="./html/sarsa.html"];
+  "Q-Learning" [color=red,href="./html/q_learning.html"];
+  "On-Policy" [color=red,href="./html/on_policy.html"];
+  "Off-Policy" [color=red,href="./html/off_policy.html"];
+  "Monte Carlo" [color=red,href="./html/monte_carlo.html"];
+  "Temporal Difference" [color=red,href="./html/temporal_difference.html"];
+  "TD-lambda" [color=red,href="./html/td_lambda.html"];
+  "NES" [color=red,href="./html/nes.html"];
+
+  // Relationship
+  "Reinforcement Learning" -> "Policy Optimization" [label="seeks"];
+
+  "Policy Optimization" -> "Value-Based" [label="has"];
+  "Policy Optimization" -> "Policy-Based" [label="has"];
+  "Policy Optimization" -> "Actor-Critic" [label="has"];
+
+  "Value-Based" -> "TD-lambda" [label="has"];
+  "Value-Based" -> "Dynamic Programming" [label="has"];
+
+  "Policy-Based" -> "Gradient-Based" [label="has"];
+  "Policy-Based" -> "Sampling-Based" [label="has"];
+
+  "Actor-Critic" -> "Value-Based" [label="blends"];
+  "Actor-Critic" -> "Policy-Based" [label="blends"];
+
+  "TD-lambda" -> "Monte Carlo" [label="blends"];
+  "TD-lambda" -> "Temporal Difference" [label="blends"];
+
+  "Dynamic Programming" -> "Bellman Optimality Equation" [label="solves"];
+  // "Dynamic Programming" -> "Model-Based" [label="is"];
+  "Dynamic Programming" -> "Value Iteration" [label="has"];
+  "Dynamic Programming" -> "Policy Iteration" [label="has"];
+
+  "Gradient-Based" -> "PILCO" [label="has"];
+  "Gradient-Based" -> "LQR" [label="has"];
+  "Gradient-Based" -> "Policy Gradient" [label="has" href="./html/from_policy_gradient_to_policy_based.html"];
+
+  "Sampling-Based" -> "CEM" [label="has"];
+  "Sampling-Based" -> "NES" [label="has"];
+
+  "Policy Gradient" -> "REINFORCE" [label="has"];
+  "REINFORCE" -> "TRPO" [label="derive",labelfloat=false];
+  "REINFORCE" -> "PPO" [label="derive"];
+  "TRPO" -> "PPO" [label="vs",dir=both,href="./html/from_trpo_to_ppo.html"];
+
+  "Temporal Difference" -> "SARSA" [label="has"];
+  "Temporal Difference" -> "Q-Learning" [label="has"];
+
+  "SARSA" -> "On-Policy" [label="is"];
+
+  "Q-Learning" -> "Off-Policy" [label="is"];
+
+  "Q-Learning" -> "SARSA" [label="vs",dir=both,href="./html/from_q_learning_to_sarsa.html"];
+
+  "Model-Based" -> "RHC/MPC" [label="with"];
+}
