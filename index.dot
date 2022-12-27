@@ -1,7 +1,4 @@
 digraph G{
-  layout="dot";
-  splines=false;
-  overlap=false;
   rankdir="TB";  // Top-down layout. Try LR for left-right layout.
   compound = true; // Allow edges between clusters.
   // Concepts

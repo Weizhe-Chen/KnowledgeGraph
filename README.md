@@ -1,35 +1,64 @@
-# Share Your Organized Knowledge!
-Check out the online **interactive** knowledge graph on Reinforcement Learning.😎
-Note that the text in the graph is clickable 😊
+# Share Your Expertise with the World: Online Knowledge Graph! 📖
 
-<a href="https://weizhechen.com/KnowledgeGraph/index.html"><img src="./images/demo_graph.png" alt="drawing"></a>
+Welcome to the online interactive knowledge graph! Click on the image below to check out the Reinforcement Learning graph in action. Note that the text in the graph is also clickable, so you can easily navigate to different topics.
 
-## What should I install?
-1. Install `pandoc` following https://github.com/jgm/pandoc/blob/master/INSTALL.md
-1. Install `graphviz` via
+[![demo graph](./images/demo_graph.png)](https://weizhechen.com/KnowledgeGraph/index.html)
+
+## Make Your Own Graph!🙋
+
+To create your own knowledge graph, follow these steps:
+
+1. Install [Pandoc](https://github.com/jgm/pandoc/blob/master/INSTALL.md) - a universal document converter that we use to convert the Markdown files to HTML.
+2. Install [Graphviz](https://graphviz.org/) - an open-source graph visualization software that we use to generate the graph. To install Graphviz on Ubuntu, use the following command:
 
     ```bash
     sudo apt install graphviz
     ```
 
-## How do I open the graph?
-If you have downloaded/cloned the repository, simply open `index.html` using your browser.
-If you would like to share your knowledge graph online, like [this website](https://weizhechen.com/KnowledgeGraph/index.html), follow these steps:
-1. Fork this repository via the upper-right button.
-2. Go to your forked repository.
-3. Find the `Settings` option on the top
-4. Select `Pages` in the left panel.
-5. Select `main` in the **Branch** section and save it to enable your GitHub Pages.
-6. Enable `Enforce HTTPS`.
-7. Now your knowledge graph can be accessed via
-https://your-github-user-name.github.io/KnowledgeGraph/index.html.
+3. Clone this repository:
 
-## I would like to build my own knowledge graph!
-The code for generating the graph is located at `index.dot`.
-Graphviz code is easy to understand.
-To build your own graph, simply modify `graph.dot` using your favorate editor (I personally prefer NeoVim) and then generate the graph by executing the shell script.
+    ```bash
+    git clone https://github.com/Weizhe-Chen/KnowledgeGraph.git
+    ```
 
-```bash
-make
-./open.sh
-```
+4. Add a new Markdown file explaining a concept (e.g., `concept_a.md`) or a relationship (e.g., `from_a_to_b.md`). Use the following format for the file:
+    ```Markdown
+    ---
+    title: "Concept A"
+    ---
+    Describe your understanding of this concept or its relationship with other concepts.
+    ```
+5. Add the concept or relationship to the graph. Modify `index.dot` using your favorite text editor.
+    * To add a concept:
+        ```dot
+        "Concept A" [href="./html/concept_a.html"];
+        ```
+    * To add a relationship:
+        ```dot
+        // we can also make the edge label clickable by adding href attribute.
+        "Concept A" -> "Concept B" [label="is"]
+        ```
+6. Build the graph.
+    ```bash
+    make
+    ```
+7. Open the graph. Simply open the generated `index.html` file or you can use the `open.sh` script to open the graph in your default browser:
+    ```bash
+    ./open.sh
+    ```
+8. If you would like to share your knowledge graph online, like [this website](https://weizhechen.com/KnowledgeGraph/index.html), follow these steps:
+    * Fork this repository via the upper-right button.
+    * Go to your forked repository.
+    * Find the *Settings* option on the top
+    * Select **Pages** in the left panel.
+    * Select **main** in the **Branch** section and save it to enable your GitHub Pages.
+    * Enable **Enforce HTTPS**.
+    * Now your knowledge graph can be accessed via `https://your-github-user-name.github.io/KnowledgeGraph/index.html`.
+
+## Acknowledgements 👏
+
+We would like to thank the following tools and resources for making this project possible:
+
+* [Pandoc](https://pandoc.org/) - for converting the Markdown files to HTML.
+* [Graphviz](https://graphviz.org/) - for generating the graph.
+* [ChatGPT](https://chat.openai.com/) - for helping us build the demo reinforcement learning knowledge graph.
