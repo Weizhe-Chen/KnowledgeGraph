@@ -1,5 +1,5 @@
 # Share Your Organized Knowledge!
-Check out the online **interactive** knowledge graph.😎
+Check out the online **interactive** knowledge graph on Reinforcement Learning.😎
 Note that the text in the graph is clickable 😊
 
 <a href="https://weizhechen.com/KnowledgeGraph/index.html"><img src="./images/demo_graph.png" alt="drawing"></a>
