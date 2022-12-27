@@ -4,6 +4,8 @@ Welcome to the online interactive knowledge graph! Click on the image below to c
 
 [![demo graph](./images/demo_graph.png)](https://weizhechen.com/KnowledgeGraph/index.html)
 
+> It is important to note that the Reinforcement Learning graph was created for demonstration purposes and may not be entirely accurate due to the limited time (several hours) available for its construction.
+
 ## Make Your Own Graph!🙋
 
 To create your own knowledge graph, follow these steps:
