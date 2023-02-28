@@ -67,5 +67,3 @@ We would like to thank the following tools and resources for making this project
 * [Pandoc](https://pandoc.org/) - for converting the Markdown files to HTML.
 * [Graphviz](https://graphviz.org/) - for generating the graph.
 * [ChatGPT](https://chat.openai.com/) - for helping us build the demo reinforcement learning knowledge graph.
-
-## Suppo
